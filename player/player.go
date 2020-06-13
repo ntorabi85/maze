@@ -66,7 +66,7 @@ embedded_components {
   "}\n"
   "linear_damping: 0.9\n"
   "angular_damping: 0.0\n"
-  "locked_rotation: false\n"
+  "locked_rotation: true\n"
   ""
   position {
     x: 0.0
