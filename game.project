@@ -1,0 +1,20 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 540
+height = 960
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = maze
+
+[physics]
+gravity_y = 0.0
+scale = 0.1
+
