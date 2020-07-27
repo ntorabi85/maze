@@ -4,7 +4,7 @@ instances {
   prototype: "/player/player.go"
   position {
     x: 51.0
-    y: 931.0
+    y: 928.0
     z: 0.0
   }
   rotation {

@@ -1,0 +1,27 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+
+function update(self, dt)
+
+end
+
+function on_message(self, message_id, message, sender)
+
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then 
+		local gamepad_panel = gui.get_node("panel")
+		if gui.pick_node(gamepad_panel, action.x, action.y) then
+			local gamepad_analogbg = gui.get_node("analog_bg")
+			local gamepad_analog = gui.get_node("analog")
+			gui.set_position(gamepad_analogbg, vmath.vector3(action.x, action.y, 0))
+			gui.set_position(gamepad_analog, vmath.vector3(action.x, action.y, 0))
+			print("analog ps: " .. gui.get_position(gamepad_analog))
+			-- print("touch pos: " .. action.x .. ", " .. action.y)
+			print("analog screen pos: " .. gui.get_screen_position(gamepad_analog))
+		end
+	end
+end
