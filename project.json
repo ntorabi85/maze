@@ -1,0 +1,8 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "maze",
+  "id": "83326dfd-d289-4f6d-8e62-80c9e8be617f",
+  "version": "2.4.0",
+  "isNew": false
+}
