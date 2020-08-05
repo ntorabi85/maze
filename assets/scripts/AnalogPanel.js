@@ -27,38 +27,26 @@ cc.Class({
     touchStart(event){
         let touchPos = event.getLocation();
         let localTouchPos = this.node.convertToNodeSpaceAR(touchPos);
-        // this.analogPad.x = localTouchPos.x;
-        // this.analogPad.y = localTouchPos.y;
-        // this.limitGamepad(localTouchPos);
         this.setAnalogPadPos(localTouchPos);
-        this.gamepadVector = localTouchPos;
     },
     
     touchMove(event){
         let touch = event.getTouches()[0];
         let touchPos = touch.getLocation();
         let localTouchPos = this.analogPad.convertToNodeSpaceAR(touchPos);
-        // this.analogStick.x = localTouchPos.x;
-        // this.analogStick.y = localTouchPos.y;
         this.limitGamepad(localTouchPos);
         this.setAnalogStickPos(localTouchPos);
         this.gamepadVector = localTouchPos;
-        console.log("x: " + this.gamepadVector.x)
-        console.log("y: " + this.gamepadVector.y)
     },
 
     touchEnd(){
         this.gamepadVector = cc.Vec2.ZERO
         this.setAnalogStickPos(cc.Vec2.ZERO)
-        // this.analogStick.x = 0;
-        // this.analogStick.y = 0;
     }, 
     
     touchCancel(){
         this.gamepadVector = cc.Vec2.ZERO
         this.setAnalogStickPos(cc.Vec2.ZERO)
-        // this.analogStick.x = 0;
-        // this.analogStick.y = 0;
     },
 
     setAnalogPadPos(pos){
