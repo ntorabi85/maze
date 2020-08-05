@@ -1,10 +1,16 @@
 {
   "group-list": [
-    "default"
+    "player",
+    "wall"
   ],
   "collision-matrix": [
     [
+      true,
       true
+    ],
+    [
+      true,
+      false
     ]
   ],
   "excluded-modules": [
